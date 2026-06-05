@@ -9,7 +9,17 @@ body {
 }
 
 .hero {
-    padding: 100px 20px;
+    background-color: #2d5a27;
+
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
 }
 
 h1 {
