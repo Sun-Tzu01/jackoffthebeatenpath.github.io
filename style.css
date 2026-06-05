@@ -1,13 +1,25 @@
-body {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
 }
+body {
+    background-color: #1f4d3a;
+    color: white;
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    margin: 0;
+}
+
+.hero {
+    padding: 100px 20px;
+}
+
 h1 {
+    font-size: 4rem;
     color: #2c3e50;
 }
 
+p {
+    font-size: 1.5rem;
+}
 a {
     color: blue;
-}
