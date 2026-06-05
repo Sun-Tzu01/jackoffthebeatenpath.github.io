@@ -1,35 +1,112 @@
 body {
-    background-color: #1f4d3a;
-    color: white;
-
-    font-family: Arial, sans-serif;
-    text-align: center;
-
-    margin: 0;
+margin: 0;
+background-color: #f4f1e8;
+color: #2c2c2c;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 1.6;
 }
 
 .hero {
-    background-color: #2d5e3c;
-
-    height: 400px;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    color: white;
+background-color: #1f4d3a;
+color: white;
+text-align: center;
+padding: 80px 20px;
 }
 
-h1 {
-    font-size: 4rem;
-    color: #ffffff;
+.hero h1 {
+margin-bottom: 10px;
+font-size: 3rem;
 }
 
-p {
-    font-size: 1.5rem;
+.hero p {
+margin-top: 0;
+font-size: 1.2rem;
 }
-a {
-    color: blue;
+
+.nav {
+background-color: #1f4d3a;
+padding: 15px;
+}
+
+.nav a {
+color: white;
+text-decoration: none;
+margin-right: 20px;
+font-weight: bold;
+}
+
+.nav a:hover {
+text-decoration: underline;
+}
+
+.container {
+max-width: 900px;
+margin: auto;
+padding: 30px;
+}
+
+.card {
+background-color: white;
+padding: 20px;
+margin-bottom: 20px;
+border-left: 5px solid #1f4d3a;
+border-radius: 5px;
+}
+
+.card h2 {
+margin-top: 0;
+}
+
+.card a {
+color: #1f4d3a;
+text-decoration: none;
+}
+
+.card a:hover {
+text-decoration: underline;
+}
+
+.location {
+color: #666666;
+}
+
+.meta {
+color: #777777;
+font-size: 0.95rem;
+}
+
+.stats {
+background-color: #e8efe9;
+border-left: 5px solid #1f4d3a;
+padding: 15px;
+margin-bottom: 30px;
+}
+
+.photo {
+text-align: center;
+margin: 40px 0;
+}
+
+.photo img {
+width: 100%;
+max-width: 800px;
+border-radius: 8px;
+}
+
+.caption {
+color: #666666;
+font-style: italic;
+margin-top: 10px;
+}
+
+.footer {
+text-align: center;
+color: #777777;
+padding: 40px 0;
+}
+
+hr {
+border: none;
+border-top: 1px solid #cccccc;
+margin: 40px 0;
 }
