@@ -202,7 +202,7 @@ margin: 40px 0;
 .button {
     display: inline-block;
     background-color: #1f4d3a;
-    color: white;
+    color: #ffffff !important;
     padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
@@ -212,4 +212,5 @@ margin: 40px 0;
 
 .button:hover {
     background-color: #163827;
+    color: #ffffff !important;
 }
