@@ -1,0 +1,25 @@
+title: Jack Off The Beaten Path
+description: Appalachian Trail thru-hike journal, 2026 southbound.
+url: https://jackoffthebeatenpath.com
+baseurl: ""
+timezone: UTC
+markdown: kramdown
+
+collections:
+  journal:
+    output: true
+    permalink: /blog/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: journal
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - images/gallery/README.md
+  - vendor
+  - Gemfile
+  - Gemfile.lock

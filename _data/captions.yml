@@ -1,0 +1,11 @@
+# Optional photo captions.
+#
+# Every image in images/gallery/ is shown on the Photos page, whether or
+# not it is listed here. Add a line only when you want a caption.
+#
+#     exact-filename.jpg: "Caption text"
+#
+# The filename must match exactly, including capitalization.
+# Quotes are optional unless the caption contains a colon.
+
+mtkatahdin.jpg: "Mount Katahdin"
