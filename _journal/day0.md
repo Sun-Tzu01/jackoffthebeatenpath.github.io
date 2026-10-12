@@ -3,8 +3,8 @@ layout: post
 title: "Day 0 – At Home"
 date: 2026-06-21
 location: New York
-miles_today: 5.2
-miles_total: 5.2
+miles_today: 0
+miles_total: 0
 summary: The calm before the storm.
 ---
 
