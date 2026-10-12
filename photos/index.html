@@ -1,0 +1,81 @@
+---
+layout: default
+title: Photos
+---
+
+<div class="container">
+  <h1>Photos</h1>
+  <p>From the trail, and the hikes that got me here. Select a photo to see it larger.</p>
+
+  <div class="gallery">
+    {% assign shown = false %}
+    {% assign files = site.static_files | sort: "name" | reverse %}
+    {% for file in files %}
+      {% assign ext = file.extname | downcase %}
+      {% assign year_num = file.name | slice: 0, 4 | plus: 0 %}
+      {% if file.path contains "images/gallery/" and year_num > 1900 %}
+        {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" or ext == ".gif" %}
+          {% assign shown = true %}
+          {% include gallery-item.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% for file in files %}
+      {% assign ext = file.extname | downcase %}
+      {% assign year_num = file.name | slice: 0, 4 | plus: 0 %}
+      {% if file.path contains "images/gallery/" and year_num <= 1900 %}
+        {% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" or ext == ".gif" %}
+          {% assign shown = true %}
+          {% include gallery-item.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% unless shown %}
+    <p class="meta">No photos yet.</p>
+  {% endunless %}
+</div>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="Close photo">&times;</button>
+  <img id="lightbox-img" alt="">
+  <p id="lightbox-caption" class="lightbox-caption" hidden></p>
+</div>
+
+<script>
+(function () {
+  var box = document.getElementById("lightbox");
+  var img = document.getElementById("lightbox-img");
+  var cap = document.getElementById("lightbox-caption");
+  if (!box) return;
+
+  function closeBox() {
+    box.hidden = true;
+    img.removeAttribute("src");
+    document.body.classList.remove("lightbox-open");
+  }
+
+  document.querySelectorAll(".gallery-item").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      img.src = btn.getAttribute("data-full");
+      img.alt = btn.getAttribute("data-alt") || "";
+      var text = btn.getAttribute("data-caption") || "";
+      cap.textContent = text;
+      cap.hidden = !text;
+      box.hidden = false;
+      document.body.classList.add("lightbox-open");
+    });
+  });
+
+  box.addEventListener("click", function (event) {
+    if (event.target === box || event.target.classList.contains("lightbox-close")) {
+      closeBox();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !box.hidden) closeBox();
+  });
+})();
+</script>

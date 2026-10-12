@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.url == "/" %}Jack Off The Beaten Path{% elsif page.title %}{{ page.title }} | Jack Off The Beaten Path{% else %}Jack Off The Beaten Path{% endif %}</title>
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+  {% include nav.html %}
+  {{ content }}
+  <div class="footer">Jack Off The Beaten Path</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="container">
+  <h1>{{ page.title }}</h1>
+  {% if page.location %}
+    <h3 class="location">{{ page.location }}</h3>
+  {% endif %}
+  <div class="stats">
+    <strong>Date:</strong> {{ page.date | date: "%B %-d, %Y" }}<br>
+    {% if page.miles_today != nil %}
+      <strong>Miles Today:</strong> {{ page.miles_today }}<br>
+    {% endif %}
+    {% if page.miles_total != nil %}
+      <strong>Total Miles:</strong> {{ page.miles_total }}
+    {% endif %}
+  </div>
+  {{ content }}
+</div>

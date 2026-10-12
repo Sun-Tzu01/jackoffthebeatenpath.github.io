@@ -1,0 +1,15 @@
+{% assign caption = "" %}
+{% if site.data.captions %}
+  {% assign caption = site.data.captions[file.name] %}
+{% endif %}
+{% if caption %}
+  {% assign alt = caption %}
+{% else %}
+  {% assign alt = "Trail photo" %}
+{% endif %}
+<button type="button" class="gallery-item" data-full="{{ file.path | relative_url }}" data-caption="{{ caption }}" data-alt="{{ alt }}">
+  <img src="{{ file.path | relative_url }}" alt="{{ alt }}" loading="lazy">
+  {% if caption %}
+    <span class="gallery-caption">{{ caption }}</span>
+  {% endif %}
+</button>
